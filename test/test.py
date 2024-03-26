@@ -24,6 +24,7 @@ for m in range(2, 501):
 for n in range(2, 501):
     ws['D' + str(n)] = random.randint(10000, 100000)
 
+# ランダムに生成する月日の範囲を2020-1-1～2020―12-17と決める
 from datetime import timedelta
 from datetime import date
 from random import randrange
@@ -36,6 +37,7 @@ days_between_dates = time_between_dates.days
 random_number_of_days = random.randrange(days_between_dates)
 random_date = start_date + timedelta(days=random_number_of_days)
 
+# A列に2020―1-1～2020―12―17の範囲でランダムに生成する
 for p in range(2, 501):
     tart_date = date(2020, 1, 1)
     end_date = date(2020, 12, 17)
@@ -46,6 +48,8 @@ for p in range(2, 501):
     random_date = start_date + timedelta(days=random_number_of_days)
 
     ws['A' + str(p)] = (random_date)
+    # セルの大きさ調整
     sheet.column_dimensions['A'].width = 13
 
+# 変更内容を保存する
 wb.save('sample1.xlsx')
