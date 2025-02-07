@@ -39,7 +39,7 @@ random_date = start_date + timedelta(days=random_number_of_days)
 
 # A列に2020―1-1～2020―12―17の範囲でランダムに生成する
 for p in range(2, 501):
-    tart_date = date(2020, 1, 1)
+    start_date = date(2020, 1, 1)
     end_date = date(2020, 12, 17)
 
     time_between_dates = end_date - start_date
